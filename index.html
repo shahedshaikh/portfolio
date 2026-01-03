@@ -3,36 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shahed Shaikh | Senior BI Developer</title>
+<title>Portfolio</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
 :root{
 --primary:#6366f1;
 --accent:#f59e0b;
---dark:#0f172a;
---light:#f8fafc;
+--bg:#f8fafc;
+--text:#1e293b;
 }
 
 body{
-background:#f8fafc;
-color:#334155;
-line-height:1.6;
+background:var(--bg);
+color:var(--text);
 }
 
-/* HEADER */
+/* NAVBAR */
 header{
 position:fixed;
-width:100%;
 top:0;
-background:rgba(255,255,255,.85);
-backdrop-filter:blur(10px);
+width:100%;
+background:#fff;
+box-shadow:0 4px 20px rgba(0,0,0,.05);
 z-index:1000;
-box-shadow:0 4px 12px rgba(0,0,0,.05);
 }
 
 nav{
@@ -45,47 +48,69 @@ align-items:center;
 }
 
 .logo{
-font-size:24px;
+font-size:22px;
 font-weight:700;
 color:var(--primary);
 }
 
 nav ul{
 display:flex;
-list-style:none;
 gap:30px;
+list-style:none;
 }
 
 nav a{
 text-decoration:none;
 color:#334155;
-font-weight:600;
+font-weight:500;
 }
-
-nav a:hover{color:var(--primary)}
 
 /* HERO */
 .hero{
-padding:160px 20px 120px;
-background:linear-gradient(135deg,#6366f1,#4f46e5);
-color:white;
+min-height:100vh;
+padding-top:120px;
+background:linear-gradient(135deg,#f59e0b,#fbbf24);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
 text-align:center;
+color:white;
 }
 
-.hero h1{font-size:48px;margin-bottom:10px}
-.hero p{font-size:22px;margin-bottom:30px}
+.hero img{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:8px solid rgba(255,255,255,.6);
+box-shadow:0 20px 40px rgba(0,0,0,.25);
+margin-bottom:30px;
+}
+
+.hero h1{
+font-size:44px;
+font-weight:700;
+}
+
+.hero p{
+font-size:20px;
+margin-top:10px;
+opacity:.95;
+}
 
 .btn{
-background:linear-gradient(135deg,var(--accent),#fbbf24);
-color:#111;
-padding:14px 32px;
-border-radius:10px;
+margin-top:30px;
+padding:14px 36px;
+border-radius:12px;
+background:linear-gradient(135deg,#6366f1,#4f46e5);
+color:white;
 text-decoration:none;
-font-weight:700;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
+font-weight:600;
+box-shadow:0 15px 30px rgba(0,0,0,.25);
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
 padding:90px 20px;
 max-width:1200px;
@@ -93,66 +118,80 @@ margin:auto;
 }
 
 section h2{
+text-align:center;
 font-size:36px;
-margin-bottom:30px;
-color:var(--dark);
+margin-bottom:50px;
+color:var(--accent);
 }
 
 /* ABOUT */
-.about p{
-font-size:18px;
+.about-text{
 max-width:900px;
+margin:auto;
+font-size:18px;
+line-height:1.8;
 }
 
 /* SKILLS */
 .skills-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:30px;
-margin-top:40px;
 }
 
-.skill{
+.skill-card{
 background:white;
-padding:30px;
-border-radius:16px;
+padding:40px 20px;
+border-radius:18px;
 text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,.05);
+box-shadow:0 15px 35px rgba(0,0,0,.05);
+transition:.3s;
 }
 
-.skill i{
+.skill-card:hover{
+transform:translateY(-8px);
+}
+
+.skill-card i{
 font-size:36px;
 color:var(--primary);
 margin-bottom:15px;
 }
 
 /* CONTACT */
-.contact-box{
-display:flex;
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
-flex-wrap:wrap;
-margin-top:40px;
 }
 
 .contact-card{
 background:white;
-padding:30px;
-border-radius:16px;
-flex:1;
-min-width:250px;
+padding:40px 20px;
+border-radius:18px;
 text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,.05);
+box-shadow:0 15px 35px rgba(0,0,0,.05);
+}
+
+.contact-card i{
+font-size:32px;
+color:var(--primary);
+margin-bottom:15px;
 }
 
 /* FOOTER */
 footer{
 background:#020617;
-color:white;
-text-align:center;
 padding:40px;
+text-align:center;
+color:white;
 }
 
-footer a{color:white;margin:0 12px;font-size:22px}
+footer a{
+color:white;
+margin:0 12px;
+font-size:22px;
+}
 </style>
 </head>
 
@@ -160,7 +199,7 @@ footer a{color:white;margin:0 12px;font-size:22px}
 
 <header>
 <nav>
-<div class="logo">Shahed Shaikh</div>
+<div class="logo">Portfolio</div>
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
@@ -172,72 +211,82 @@ footer a{color:white;margin:0 12px;font-size:22px}
 
 <!-- HERO -->
 <section class="hero" id="home">
-<h1>Hi, I'm Shahed Shaikh 👋</h1>
-<p>Senior Business Intelligence Developer</p>
+<img src="profile.jpg" alt="Profile">
+<h1>Rohit Punekar</h1>
+<p>Software Quality Engineer | Detail-Oriented</p>
 <a href="#contact" class="btn">Get In Touch</a>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="about">
+<section id="about">
 <h2>About Me</h2>
+<div class="about-text">
 <p>
-Senior Business Intelligence Developer at <b>Workfall India Pvt Ltd</b>.  
-I build executive-ready dashboards, scalable semantic models, and automated analytics pipelines using <b>Power BI, Microsoft Fabric, Azure, and SQL Server</b>.
-</p>
-<br>
+Hello! I'm Rohit, a passionate Software Quality Engineer with a keen eye for detail and a love for creating seamless user experiences.
+</p><br>
 <p>
-I specialize in performance optimization, DAX tuning, enterprise BI architecture, and transforming complex datasets into clear, decision-ready insights.
+My journey began in quality assurance, where I developed strong analytical skills and attention to detail, ensuring robust and bug-free applications.
+</p><br>
+<p>
+I believe in continuous learning and contributing to innovative projects that make a positive impact.
 </p>
+</div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-<h2>Tech Stack</h2>
+<h2>Skills</h2>
 <div class="skills-grid">
-<div class="skill"><i class="fas fa-chart-line"></i><h4>Power BI & DAX</h4></div>
-<div class="skill"><i class="fas fa-database"></i><h4>SQL Server</h4></div>
-<div class="skill"><i class="fas fa-layer-group"></i><h4>Microsoft Fabric</h4></div>
-<div class="skill"><i class="fas fa-cogs"></i><h4>Power Automate</h4></div>
-<div class="skill"><i class="fas fa-cloud"></i><h4>Azure</h4></div>
-<div class="skill"><i class="fas fa-plug"></i><h4>REST APIs</h4></div>
+<div class="skill-card"><i class="fas fa-vial"></i><h4>Selenium</h4></div>
+<div class="skill-card"><i class="fas fa-code"></i><h4>Rest Assured</h4></div>
+<div class="skill-card"><i class="fab fa-java"></i><h4>Java</h4></div>
+<div class="skill-card"><i class="fas fa-paper-plane"></i><h4>Postman</h4></div>
+<div class="skill-card"><i class="fab fa-git-alt"></i><h4>Git</h4></div>
+<div class="skill-card"><i class="fas fa-tools"></i><h4>Jenkins</h4></div>
+<div class="skill-card"><i class="fas fa-chart-line"></i><h4>JMeter</h4></div>
+<div class="skill-card"><i class="fas fa-check-double"></i><h4>Regression Testing</h4></div>
+<div class="skill-card"><i class="fas fa-cube"></i><h4>Black Box Testing</h4></div>
+<div class="skill-card"><i class="fab fa-jira"></i><h4>Jira</h4></div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2>Contact</h2>
-<div class="contact-box">
+<h2>Get In Touch</h2>
+<div class="contact-grid">
 <div class="contact-card">
 <i class="fas fa-envelope"></i>
 <h4>Email</h4>
-<p>shahed.shaikh@email.com</p>
+<p>punekar435@gmail.com</p>
 </div>
 
 <div class="contact-card">
 <i class="fab fa-linkedin"></i>
 <h4>LinkedIn</h4>
-<a href="https://www.linkedin.com/" target="_blank">View Profile</a>
+<p>View Profile</p>
 </div>
 
 <div class="contact-card">
 <i class="fas fa-map-marker-alt"></i>
 <h4>Location</h4>
-<p>India</p>
+<p>Pune, India</p>
 </div>
+</div>
+
+<div style="text-align:center;margin-top:40px;">
+<a href="#" class="btn">Contact Me</a>
 </div>
 </section>
 
 <footer>
-<p>© <span id="year"></span> Shahed Shaikh</p>
 <div>
 <a href="#"><i class="fab fa-linkedin"></i></a>
 <a href="#"><i class="fab fa-github"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
 </div>
+<p style="margin-top:20px;">© 2026 Rohit Punekar. All Rights Reserved.</p>
 </footer>
-
-<script>
-document.getElementById("year").textContent=new Date().getFullYear();
-</script>
 
 </body>
 </html>
