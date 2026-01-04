@@ -107,8 +107,10 @@ body {
   left: 120%;
 }
 /* =========================
+   /* =========================
    CERTIFICATIONS SECTION
 ========================= */
+
 .certifications {
   background: linear-gradient(135deg, #ffffff 60%, #eef2ff 100%);
   padding: 100px 0;
@@ -132,6 +134,7 @@ body {
   border-radius: 10px;
 }
 
+/* Container */
 .cert-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -140,6 +143,14 @@ body {
   margin: 0 auto;
 }
 
+/* Make anchor behave like card */
+.cert-container a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Card */
 .cert-card {
   background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(10px);
@@ -148,30 +159,36 @@ body {
   border: 1px solid rgba(99, 102, 241, 0.2);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
   transition: all 0.35s ease;
+  cursor: pointer;
 }
 
-.cert-card:hover {
+/* Hover (works when hovering anchor OR card) */
+.cert-container a:hover .cert-card {
   transform: translateY(-12px) scale(1.05);
   box-shadow: 0 20px 45px rgba(99, 102, 241, 0.25);
   border-color: var(--primary-color);
 }
 
+/* Icon */
 .cert-card i {
   font-size: 42px;
   color: var(--primary-color);
   margin-bottom: 15px;
 }
 
+/* Title */
 .cert-card h3 {
   font-size: 22px;
   margin-bottom: 8px;
   color: var(--secondary-color);
 }
 
+/* Subtitle */
 .cert-card p {
   font-size: 15px;
   color: var(--text-color);
 }
+
 /* =========================
    /* =========================
   /* =========================
