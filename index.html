@@ -1600,11 +1600,30 @@ footer p {
 <footer>
     <div class="container">
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/shahed-shaikh-4608a110b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/shahedshaikh/shahedshaikh" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/shahed-shaikh-4608a110b/" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/shahedshaikh/shahedshaikh" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <!-- Microsoft Learn -->
+            <a href="https://learn.microsoft.com/en-gb/users/shahedshaikh-7134/transcript/v2mkupm3yrn3mod"
+               target="_blank"
+               title="Microsoft Learn Profile">
+                <i class="fab fa-microsoft"></i>
+            </a>
+
+            <a href="#" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="#" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
+
         <p>&copy; <span id="year"></span> Shahed Shaikh. All Rights Reserved.</p>
     </div>
 </footer>
@@ -1612,6 +1631,7 @@ footer p {
 <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 
     <!-- Contact Modal -->
     <div id="contact-modal" class="modal">
