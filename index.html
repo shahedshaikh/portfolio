@@ -107,7 +107,6 @@ body {
   left: 120%;
 }
 /* =========================
-/* =========================
    CERTIFICATIONS SECTION
 ========================= */
 
@@ -168,6 +167,7 @@ body {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
   cursor: pointer;
+  position: relative;
 }
 
 /* Hover (no layout shift) */
@@ -198,9 +198,21 @@ body {
   max-width: 220px; /* keeps text width consistent */
 }
 
+.cert-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: white;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
 /* =========================
-   /* =========================
-  /* =========================
    PROJECTS SECTION
 ========================= */
 .projects {
@@ -1545,11 +1557,7 @@ footer p {
         </div>
       </a>
 
-    </div>
-  </div>
-</section>
-
-     <!-- DP-800 -->
+      <!-- DP-800 -->
       <a
         href="https://learn.microsoft.com/api/credentials/share/en-gb/ShahedShaikh-7134/15E2AD4E6C534DC5?sharingId=88C14F3B52A51B6B"
         target="_blank"
