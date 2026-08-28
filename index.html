@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio | Senior Business Intelligence Developer</title>
+    <title>Professional Portfolio | Principal Business Intelligence Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;500;400&display=swap" rel="stylesheet">
     <style>
@@ -606,6 +606,37 @@ nav {
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
+        /* About Stats */
+        .about-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .about-stat {
+            flex: 1;
+            min-width: 140px;
+            text-align: center;
+            padding: 20px 15px;
+            background: rgba(99, 102, 241, 0.06);
+            border: 1px solid rgba(99, 102, 241, 0.15);
+            border-radius: 14px;
+        }
+
+        .about-stat .stat-number {
+            display: block;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .about-stat .stat-label {
+            font-size: 13px;
+            color: var(--text-color);
+            margin-bottom: 0;
+        }
+
         /* Skills Section */
         .skills {
   background: linear-gradient(135deg, #f8fafc 60%, #e0e7ff 100%);
@@ -840,6 +871,27 @@ nav {
             align-items: center;
             justify-content: center;
             box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        /* Single-entry education card (no two-column split needed) */
+        .timeline.single-entry .timeline-item {
+            width: 100%;
+            left: 0 !important;
+            padding: 10px 40px;
+        }
+
+        .timeline.single-entry::after {
+            left: 31px;
+        }
+
+        .timeline.single-entry .timeline-item {
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+
+        .timeline.single-entry .timeline-item::after {
+            right: auto;
+            left: 15px;
         }
 
         /* Contact Section */
@@ -1195,6 +1247,7 @@ footer p {
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1218,7 +1271,7 @@ footer p {
             onerror="this.src='https://via.placeholder.com/400?text=Profile+Image'"
         >
         <h1>Shahed Shaikh</h1>
-        <p>Senior Business Intelligence Developer<span class="typing-text"></span></p>
+        <p>Principal Business Intelligence Developer<span class="typing-text"></span></p>
         <a href="#contact" class="btn">Get In Touch</a>
     </div>
 </section>
@@ -1227,9 +1280,29 @@ footer p {
    <section id="about" class="about">
 <div class="container">
 <h2>About Me</h2>
-<p>Hello! I'm Shahed Shaikh, Microsoft Certified Data Analyst with over 3.6 years of experience across IT, Manufacturing, Insurance, Finance, and Healthcare domains. My core expertise lies in Business Intelligence, with a strong focus on Power BI development, data analytics, and end-to-end reporting solutions. I have a proven track record in procurement analysis, financial reporting, and data-driven decision-making. With hands-on experience in Microsoft Fabric, Power Platform, and scalable BI architecture, I’m passionate about transforming data into actionable insights that drive business growth. I look forward to bringing that value to your organization.</p>
-<p>I specialize in Power BI, Microsoft Fabric, SQL Server, Azure, and enterprise-grade analytics solutions across procurement, payroll, finance, manufacturing, and banking domains.</p>
-<p>My goal is to help organizations make faster, smarter, data-driven decisions through high-performance BI solutions.</p> 
+<p>Hello! I'm Shahed Shaikh, currently Principal Business Intelligence Developer at AMS. I'm a Microsoft Certified Data Analyst with 9 years of overall experience — including 4+ years in Data Analytics across IT, Manufacturing, and Banking domains, and 5+ years in manufacturing operations as a Production Supervisor. My core expertise lies in Business Intelligence, with a strong focus on Power BI development, data analytics, and end-to-end reporting solutions.</p>
+
+<div class="about-stats">
+  <div class="about-stat">
+    <span class="stat-number">9</span>
+    <p class="stat-label">Years Overall Experience</p>
+  </div>
+  <div class="about-stat">
+    <span class="stat-number">3.9+</span>
+    <p class="stat-label">Years in Data Analytics</p>
+  </div>
+  <div class="about-stat">
+    <span class="stat-number">5+</span>
+    <p class="stat-label">Years in Manufacturing Ops</p>
+  </div>
+  <div class="about-stat">
+    <span class="stat-number">5</span>
+    <p class="stat-label">Microsoft Certifications</p>
+  </div>
+</div>
+
+<p>I have a proven track record in designing interactive dashboards, data models (Star & Snowflake Schema), and KPI-driven reports to support strategic decision-making, with hands-on experience in Power BI, SQL Server, Microsoft Fabric, SharePoint, and advanced Excel. I'm proficient in ETL/ELT processes using Power Query, SQL, Python, PySpark, and Dataflow Gen2.</p>
+<p>My manufacturing background — spanning production planning, OEE monitoring, process optimization, and cross-functional team leadership — gives me a practical edge in translating business and operational requirements into scalable data solutions that drive measurable business growth.</p> 
 <a href="#skills" class="btn">View My Skills</a>
 </div>
 </section>
@@ -1239,7 +1312,6 @@ footer p {
     <h2 style="color: #f59e0b; text-align:center; margin-bottom:40px;font-size: 36px;">Skills</h2>
     <div class="skills-container">
 
-      <!-- Existing Skills -->
       <div class="skill-card">
         <i class="fas fa-project-diagram"></i>
         <h3>Power BI</h3>
@@ -1262,7 +1334,7 @@ footer p {
 
       <div class="skill-card">
         <i class="fas fa-random"></i>
-        <h3>ETL Pipelines</h3>
+        <h3>ETL / ELT</h3>
       </div>
 
       <div class="skill-card">
@@ -1280,29 +1352,33 @@ footer p {
         <h3>Power BI Service</h3>
       </div>
 
-      <!-- Existing Skills -->
       <div class="skill-card">
-        <i class="fab fa-java"></i>
+        <i class="fas fa-bolt"></i>
         <h3>Power Automate</h3>
       </div>
 
       <div class="skill-card">
-        <i class="fab fa-java"></i>
+        <i class="fas fa-layer-group"></i>
         <h3>MS Fabric</h3>
       </div>
 
       <div class="skill-card">
-        <i class="fas fa-tasks"></i>
-        <h3>Excel</h3>
+        <i class="fas fa-th-large"></i>
+        <h3>Power Apps</h3>
       </div>
 
       <div class="skill-card">
-        <i class="fas fa-calendar-check"></i>
+        <i class="fas fa-tasks"></i>
+        <h3>Advanced Excel</h3>
+      </div>
+
+      <div class="skill-card">
+        <i class="fas fa-snowflake"></i>
         <h3>Snowflake</h3>
       </div>
 
       <div class="skill-card">
-        <i class="fas fa-check-double"></i>
+        <i class="fas fa-hdd"></i>
         <h3>Azure Data Lake</h3>
       </div>
 
@@ -1313,7 +1389,22 @@ footer p {
 
       <div class="skill-card">
         <i class="fas fa-cube"></i>
-        <h3>Python</h3>
+        <h3>Python / PySpark</h3>
+      </div>
+
+      <div class="skill-card">
+        <i class="fas fa-brain"></i>
+        <h3>Machine Learning</h3>
+      </div>
+
+      <div class="skill-card">
+        <i class="fas fa-share-alt"></i>
+        <h3>Dynamics 365</h3>
+      </div>
+
+      <div class="skill-card">
+        <i class="fas fa-industry"></i>
+        <h3>OEE & Production Planning</h3>
       </div>
 
       <div class="skill-card">
@@ -1433,23 +1524,42 @@ footer p {
 
     <div class="timeline">
 
-      <!-- Workfall India -->
+      <!-- AMS -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="icon"><i class="fas fa-star"></i></div>
+          <h3>Principal Business Intelligence Developer</h3>
+          <span class="date">Aug 2026 – Present</span>
+          <div class="institution">AMS</div>
+          <p class="description">
+            Stepped into a principal-level BI role, leading the design and governance of enterprise Power BI and
+            Microsoft Fabric solutions and setting technical direction for reporting standards, data modeling,
+            and dashboard architecture.
+            <br><br>
+            Partnering with stakeholders across the business to define BI strategy, mentor developers, and drive
+            adoption of scalable, high-performance analytics solutions.
+          </p>
+        </div>
+      </div>
+
+      <!-- Workfall -->
       <div class="timeline-item">
         <div class="timeline-content">
           <div class="icon"><i class="fas fa-briefcase"></i></div>
           <h3>Senior Business Intelligence Developer</h3>
-          <span class="date">April 2025 – Present</span>
-          <div class="institution">Workfall India Pvt Ltd</div>
+          <span class="date">April 2025 – Aug 2026</span>
+          <div class="institution">Workfall | Bangalore, India</div>
           <p class="description">
-            Reflecting on my journey from analyst to Senior Business Intelligence Developer, I have led and delivered
-            10+ high-impact BI projects across finance, insurance, retail, and manufacturing domains.
+            Specialized in Business Intelligence, Power BI, and Data Analytics across IT, Manufacturing, and
+            Banking domains, with expertise in procurement analysis, data modeling, and decision-making using
+            SQL Server, SharePoint, and Microsoft Fabric.
             <br><br>
-            My work includes enterprise-grade Power BI dashboards, real-time reporting solutions,
-            predictive analytics, and advanced DAX modeling. I have architected scalable solutions using
-            Microsoft Fabric, Lakehouse, Direct Lake, and optimized data pipelines for performance and governance.
+            Designed interactive dashboards, reports, and advanced data models (Star & Snowflake Schema),
+            and built ETL pipelines and Dataflows with Python, SQL, and PySpark for seamless data integration.
+            Applied machine learning techniques within Microsoft Fabric for predictive analytics and forecasting.
             <br><br>
-            This role strengthened my ability to collaborate cross-functionally, engage stakeholders,
-            and translate complex business requirements into actionable insights.
+            Collaborated with business stakeholders to deliver scalable, high-performance data solutions, and
+            deployed enterprise-grade Power BI solutions integrated with Azure Data Lake, SQL Server, and Fabric.
           </p>
         </div>
       </div>
@@ -1459,31 +1569,63 @@ footer p {
         <div class="timeline-content">
           <div class="icon"><i class="fas fa-chart-line"></i></div>
           <h3>Data Analyst</h3>
-          <span class="date">Sep 2022 – April 2025</span>
-          <div class="institution">Vatsa Solutions Pvt Ltd</div>
+          <span class="date">Oct 2022 – April 2025</span>
+          <div class="institution">Vatsa Solutions Pvt Ltd | Pune, India</div>
           <p class="description">
-            Gained strong hands-on experience in Power BI development, SQL querying, and data visualization.
-            Worked on multiple business reports delivering meaningful insights for decision-making.
+            Developed 10+ ETL architectures and optimized Dataflows, improving efficiency by 1,500+ hours in
+            transformation processes, and delivered reporting solutions for projects worth $15M annually.
             <br><br>
-            Transitioned from intern-level responsibilities to owning end-to-end dashboards,
-            improving data accuracy, performance, and reporting efficiency.
+            Analyzed 15+ years of business data, built DAX measures, troubleshot 50+ Power BI alerts, and
+            resolved data modeling issues across three Azure SQL schema layers. Extracted and integrated data
+            from 8+ sources including REST APIs, Azure SQL, Power BI Datasets, CSV, SharePoint, and Excel.
+            <br><br>
+            Implemented Dataflows and metrics to streamline Spend and Supplier Analytics — reducing analytical
+            effort by 30% — while working across manufacturing, hospitality, banking, oil & gas, and e-commerce.
           </p>
         </div>
       </div>
 
-      <!-- iTpreneur Edutech -->
+      <!-- DAIPL -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="icon"><i class="fas fa-industry"></i></div>
+          <h3>Junior Engineer (Production Supervisor)</h3>
+          <span class="date">Jun 2016 – Sep 2022</span>
+          <div class="institution">DAIPL | Pune, India</div>
+          <p class="description">
+            Supervised daily production operations for a team of 20+ shop-floor operators and technicians,
+            monitoring KPIs such as OEE, downtime, rejection rate, and cycle time to improve operational efficiency.
+            <br><br>
+            Reduced machine downtime through preventive maintenance coordination, conducted root cause analysis
+            (RCA) for production and quality issues, and ensured compliance with SOPs, safety regulations, and
+            Lean principles (5S, Kaizen).
+            <br><br>
+            Maintained daily production and shift performance dashboards for management review, and coordinated
+            with Quality, Maintenance, Planning, and Supply Chain teams to keep operations running smoothly.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="education" style="background-color:#f8fafc;">
+  <div class="container">
+    <h2>Education</h2>
+
+    <div class="timeline single-entry">
+
       <div class="timeline-item">
         <div class="timeline-content">
           <div class="icon"><i class="fas fa-graduation-cap"></i></div>
-          <h3>Power BI Intern</h3>
-          <span class="date">Jan 2022 – June 2022</span>
-          <div class="institution">iTpreneur Edutech</div>
+          <h3>MBA in Operations and Program Management</h3>
+          <span class="date">06/2022 – 04/2024</span>
+          <div class="institution">Savitribai Phule Pune University, India</div>
           <p class="description">
-            Completed a Power BI-focused internship gaining practical exposure to data modeling,
-            report building, and visualization best practices.
-            <br><br>
-            This role laid a strong foundation in analytics, enabling a smooth transition into
-            professional Power BI development roles.
+            Postgraduate coursework focused on operations strategy and program management, complementing
+            hands-on manufacturing and analytics experience with formal business and process-management training.
           </p>
         </div>
       </div>
@@ -1509,7 +1651,7 @@ footer p {
         <div class="cert-card">
           <i class="fas fa-chart-line"></i>
           <h3>PL-300</h3>
-          <p>Microsoft Power BI Data Analyst</p>
+          <p>Power BI Data Analyst Associate</p>
         </div>
       </a>
 
@@ -1523,7 +1665,7 @@ footer p {
         <div class="cert-card">
           <i class="fas fa-database"></i>
           <h3>DP-600</h3>
-          <p>Microsoft Fabric Analytics Engineer</p>
+          <p>MS Fabric Analytics Engineer Associate</p>
         </div>
       </a>
 
@@ -1532,14 +1674,14 @@ footer p {
       href="https://learn.microsoft.com/api/credentials/share/en-us/ShahedShaikh-7134/BA18EEEF87942E9D?sharingId=88C14F3B52A51B6B"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="DP-700 Microsoft Certified Fabric Analytics Engineer Associate"
+      aria-label="DP-700 Fabric Data Engineer Associate"
       class="cert-link"
     >
       <div class="cert-card">
         <span class="cert-badge">Advanced</span>
         <i class="fas fa-layer-group"></i>
         <h3>DP-700</h3>
-        <p>Microsoft Certified: Fabric Analytics Engineer Associate</p>
+        <p>Fabric Data Engineer Associate</p>
       </div>
     </a>
 
@@ -1565,7 +1707,7 @@ footer p {
         style="text-decoration: none;"
       >
         <div class="cert-card">
-          <i class="fas fa-brain"></i>
+          <i class="fas fa-shield-alt"></i>
           <h3>DP-800</h3>
           <p>SQL AI Developer Associate</p>
         </div>
@@ -1616,6 +1758,12 @@ footer p {
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
                     <p>shaikhshahid217@gmail.com</p>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+91-7709530883</p>
                 </div>
 
                 <div class="contact-item">
